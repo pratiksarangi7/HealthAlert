@@ -1,6 +1,6 @@
 # medico_app
 
-A new Flutter project.
+A new Flutter project. - Readme will be updated once the project is complete
 
 ## Getting Started
 
