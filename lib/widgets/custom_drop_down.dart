@@ -59,7 +59,7 @@ class _DropDownState extends State<DropDown> {
         },
         buttonStyleData: ButtonStyleData(
           height: 50,
-          width: 160,
+          width: MediaQuery.of(context).size.width * 0.9,
           padding: const EdgeInsets.only(left: 14, right: 14),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -79,14 +79,13 @@ class _DropDownState extends State<DropDown> {
           iconDisabledColor: Colors.grey,
         ),
         dropdownStyleData: DropdownStyleData(
-            maxHeight: 200,
-            width: 200,
+            width: MediaQuery.of(context).size.width * 0.9,
             padding: null,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(14),
             ),
-            offset: const Offset(-20, 0),
+            offset: const Offset(0, 0),
             scrollbarTheme: ScrollbarThemeData(
               radius: const Radius.circular(40),
               thickness: MaterialStateProperty.all(6),
