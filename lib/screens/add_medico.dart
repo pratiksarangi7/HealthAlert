@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medico_app/widgets/custom_drop_down.dart';
 import 'package:medico_app/widgets/item_card.dart';
-import 'package:medico_app/widgets/new_reminder.dart';
+import 'package:medico_app/widgets/reminders.dart';
 import 'package:omni_datetime_picker/omni_datetime_picker.dart';
 
 class AddMedicoItemScreen extends StatefulWidget {
@@ -287,9 +287,38 @@ class _AddMedicoItemScreenState extends State<AddMedicoItemScreen> {
                 ],
               ),
               const SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: const [
+                  Expanded(
+                    child: Divider(
+                      color: Colors.black,
+                      thickness: 1.6,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    "Reminders",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Expanded(
+                    child: Divider(
+                      color: Colors.black,
+                      thickness: 1.6,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
                 height: 15,
               ),
-              Reminder(addNewReminder: _addAReminder),
+              Reminders(addNewReminder: _addAReminder, reminderData: reminders),
             ],
           ),
         ));

@@ -15,7 +15,7 @@ class ItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     var outlineColor = Colors.grey.withOpacity(0.9);
     if (isTapped) {
-      outlineColor = Color.fromARGB(255, 0, 128, 96);
+      outlineColor = const Color.fromARGB(255, 0, 128, 96);
     }
     return Column(
       children: [

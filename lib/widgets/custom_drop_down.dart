@@ -74,8 +74,8 @@ class _DropDownState extends State<DropDown> {
           icon: Icon(
             Icons.arrow_downward,
           ),
-          iconSize: 14,
-          iconEnabledColor: Colors.yellow,
+          iconSize: 16,
+          iconEnabledColor: Color.fromARGB(255, 12, 12, 12),
           iconDisabledColor: Colors.grey,
         ),
         dropdownStyleData: DropdownStyleData(
