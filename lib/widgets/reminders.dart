@@ -32,28 +32,24 @@ class ReminderState extends State<Reminders> {
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 child: Container(
+                  padding: const EdgeInsets.all(13),
                   height: 50,
                   decoration: BoxDecoration(
                     color: Theme.of(context)
                         .colorScheme
                         .secondaryContainer
-                        .withOpacity(0.2),
+                        .withOpacity(0.1),
                     borderRadius: const BorderRadius.all(Radius.circular(10)),
                     border: Border.all(
                         color: Theme.of(context).colorScheme.primary),
                   ),
-                  child: Row(children: [
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      DateFormat.yMMMMEEEEd()
-                          .format(widget.reminderData[index]),
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ]),
+                  child: Text(
+                    DateFormat('EEEE, d MMMM yyyy, hh:mm a')
+                        .format(widget.reminderData[index]),
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 16),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               );
             },

@@ -38,7 +38,7 @@ class _MedicoItemsScreenState extends ConsumerState<MedicoItemsScreen> {
         itemBuilder: (context, index) {
           return ListTile(
               title: Text(
-            medItems[index].title,
+            medItems[index].name,
           ));
         },
       ),

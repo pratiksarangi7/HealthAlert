@@ -1,12 +1,18 @@
-import 'package:medico_app/models/catetory.dart';
-
 class MedicoItem {
-  MedicoCategory category;
-  String title;
-  DateTime date;
+  String medImagePath;
+  String name;
+  String dosage;
+  String beforeOrAfterFood;
+  DateTime medicationStartDate;
+  DateTime medicationEndDate;
+  List<DateTime> reminders;
   MedicoItem({
-    required this.category,
-    required this.title,
-    required this.date,
+    required this.medImagePath,
+    required this.name,
+    required this.dosage,
+    required this.beforeOrAfterFood,
+    required this.medicationStartDate,
+    required this.medicationEndDate,
+    required this.reminders,
   });
 }

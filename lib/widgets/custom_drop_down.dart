@@ -3,7 +3,11 @@ import 'package:dropdown_button2/dropdown_button2.dart';
 
 class DropDown extends StatefulWidget {
   final List<String> dropDownItems;
-  const DropDown({super.key, required this.dropDownItems});
+  final Function(String text) dropDownDataUpdater;
+  const DropDown(
+      {super.key,
+      required this.dropDownItems,
+      required this.dropDownDataUpdater});
 
   @override
   State<DropDown> createState() => _DropDownState();
@@ -56,6 +60,7 @@ class _DropDownState extends State<DropDown> {
           setState(() {
             selectedValue = value as String;
           });
+          widget.dropDownDataUpdater(selectedValue);
         },
         buttonStyleData: ButtonStyleData(
           height: 50,
